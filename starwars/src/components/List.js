@@ -3,10 +3,19 @@ import Characters from './Characters';
 
 
 
-function List() {
+function List(props) {
     return(
-        <Characters />
+        <div>
+           {props.characters.map(character => (
+               <Characters 
+                    name = {character.name}
+               />
+           ))}
+            
+        </div>
+        
     )
+    
 }
 
 

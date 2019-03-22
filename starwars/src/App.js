@@ -8,6 +8,7 @@ class App extends Component {
     this.state = {
       starwarsChars: []
     };
+    
   }
 
   componentDidMount() {
@@ -28,14 +29,14 @@ class App extends Component {
       .catch(err => {
         throw new Error(err);
       });
-      console.log(this.state)
+      //console.log(this.state)
   };
 
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <List />
+        <List characters={this.state.starwarsChars}/>
       </div>
     );
   }
